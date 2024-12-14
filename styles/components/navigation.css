@@ -1,23 +1,35 @@
 @layer components {
-  .nav-link {
-    @apply block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors;
-    @apply hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground;
-    @apply dark:hover:bg-muted/50 dark:hover:text-foreground dark:focus:bg-muted/50 dark:focus:text-foreground;
+  .nav-menu-trigger {
+    @apply group inline-flex h-9 w-max items-center justify-center;
+    @apply rounded-md bg-background px-4 py-2 text-sm font-medium;
+    @apply transition-colors hover:bg-accent hover:text-accent-foreground;
+    @apply focus:bg-accent focus:text-accent-foreground focus:outline-none;
+    @apply disabled:pointer-events-none disabled:opacity-50;
+    @apply data-[active]:bg-accent/50 data-[state=open]:bg-accent/50;
   }
 
-  .nav-link-title {
-    @apply text-sm font-medium leading-none;
+  .nav-menu-icon {
+    @apply relative top-[1px] ml-1 h-3 w-3;
+    @apply transition duration-300 group-data-[state=open]:rotate-180;
   }
 
-  .nav-link-description {
-    @apply line-clamp-2 text-sm leading-snug text-muted-foreground;
+  .nav-menu-content {
+    @apply absolute left-0 top-0 w-full;
+    @apply data-[motion=from-start]:animate-enterFromLeft;
+    @apply data-[motion=from-end]:animate-enterFromRight;
+    @apply data-[motion=to-start]:animate-exitToLeft;
+    @apply data-[motion=to-end]:animate-exitToRight;
   }
 
-  .mobile-nav-trigger {
-    @apply mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden;
+  .nav-menu-link {
+    @apply block select-none space-y-1 rounded-md p-3;
+    @apply no-underline outline-none transition-colors;
+    @apply hover:bg-accent hover:text-accent-foreground;
+    @apply focus:bg-accent focus:text-accent-foreground;
   }
 
-  .mobile-nav-item {
-    @apply block px-2 py-1 text-lg font-medium transition-colors hover:text-primary;
+  .nav-menu-viewport {
+    @apply relative mt-2 overflow-hidden rounded-md border bg-popover;
+    @apply shadow-lg transition-[width,_height] duration-300;
   }
 }
