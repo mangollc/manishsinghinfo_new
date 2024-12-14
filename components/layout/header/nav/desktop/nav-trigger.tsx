@@ -11,9 +11,15 @@ interface NavTriggerProps {
 
 export function NavTrigger({ name, className }: NavTriggerProps) {
   return (
-    <NavigationMenuTrigger className={cn("nav-menu-trigger", className)}>
-      <span>{name}</span>
-      <ChevronDown className="nav-menu-icon" aria-hidden="true" />
+    <NavigationMenuTrigger 
+      className={cn(
+        "flex items-center gap-1 px-4 py-2 text-sm font-medium",
+        "transition-colors hover:text-accent-foreground",
+        className
+      )}
+    >
+      {name}
+      <ChevronDown className="h-4 w-4" aria-hidden="true" />
     </NavigationMenuTrigger>
   )
 }
