@@ -1,0 +1,18 @@
+@layer components {
+  .feature-card {
+    @apply relative overflow-hidden rounded-lg border p-6 transition-all;
+    @apply bg-card/50 dark:bg-card/30;
+    @apply hover:shadow-lg dark:hover:bg-muted/5;
+  }
+
+  .feature-icon-container {
+    @apply mb-4 flex h-12 w-12 items-center justify-center rounded-full;
+    @apply bg-gradient-to-br from-primary/10 to-secondary/10;
+  }
+
+  .feature-link {
+    @apply inline-flex items-center text-sm font-medium;
+    @apply text-primary hover:text-primary/80;
+    @apply transition-colors hover:underline;
+  }
+}
