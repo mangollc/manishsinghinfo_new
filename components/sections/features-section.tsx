@@ -1,4 +1,5 @@
 import { BookOpen, BrainCircuit, Calculator, GraduationCap, Receipt, Plane } from "lucide-react"
+import { Container } from "@/components/ui/container"
 import { FeatureCard } from "@/components/cards/feature-card"
 
 const features = [
@@ -42,11 +43,11 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section className="border-t bg-muted/40 py-20">
-      <div className="container">
+    <section className="border-t bg-muted/40 py-16 md:py-24">
+      <Container>
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold">Key Offerings</h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Comprehensive resources and expert guidance to help you navigate complex challenges and achieve your goals.
           </p>
         </div>
@@ -55,7 +56,7 @@ export function FeaturesSection() {
             <FeatureCard key={feature.href} {...feature} />
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
