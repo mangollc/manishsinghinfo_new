@@ -1,10 +1,11 @@
+import { Container } from "@/components/ui/container"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export function CTASection() {
   return (
-    <section className="border-t py-20">
-      <div className="container">
+    <section className="border-t py-16 md:py-24">
+      <Container>
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-4 text-3xl font-bold">Get Started Today</h2>
           <p className="mb-8 text-muted-foreground">
@@ -15,7 +16,7 @@ export function CTASection() {
             <Link href="/register">Start Your Journey</Link>
           </Button>
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
