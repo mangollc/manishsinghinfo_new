@@ -3,13 +3,7 @@
 import Link from "next/link"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-interface MobileFooterSectionProps {
-  title: string
-  links: {
-    name: string
-    href: string
-  }[]
-}
+
 
 export function MobileFooterSection({ title, links }: MobileFooterSectionProps) {
   return (
