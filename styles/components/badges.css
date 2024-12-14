@@ -1,0 +1,11 @@
+@layer components {
+  .badge-immigration { @apply bg-[hsl(var(--immigration))] text-white hover:bg-[hsl(var(--immigration))/90]; }
+  .badge-tax { @apply bg-[hsl(var(--tax))] text-white hover:bg-[hsl(var(--tax))/90]; }
+  .badge-tech { @apply bg-[hsl(var(--tech))] text-white hover:bg-[hsl(var(--tech))/90]; }
+  .badge-ai { @apply bg-[hsl(var(--ai))] text-black hover:bg-[hsl(var(--ai))/90]; }
+  .badge-business { @apply bg-[hsl(var(--business))] text-white hover:bg-[hsl(var(--business))/90]; }
+  .badge-career { @apply bg-[hsl(var(--career))] text-white hover:bg-[hsl(var(--career))/90]; }
+  .badge-guide { @apply bg-[hsl(var(--guide))] text-white hover:bg-[hsl(var(--guide))/90]; }
+  .badge-featured { @apply bg-[hsl(var(--featured))] text-black hover:bg-[hsl(var(--featured))/90]; }
+  .badge-new { @apply bg-[hsl(var(--new))] text-white hover:bg-[hsl(var(--new))/90]; }
+}
