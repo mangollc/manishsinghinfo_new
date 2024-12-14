@@ -1,0 +1,35 @@
+@layer base {
+  :root {
+    /* Category-specific Colors */
+    --immigration: 221 83% 53%;    /* Bright Blue */
+    --tax: 142 76% 36%;           /* Emerald Green */
+    --tech: 199 89% 48%;          /* Azure Blue */
+    --ai: 265 89% 78%;            /* Vibrant Purple */
+    --business: 24 95% 53%;       /* Bright Orange */
+    --career: 331 74% 70%;        /* Hot Pink */
+    --guide: 2 85% 63%;           /* Coral Red */
+    --featured: 47 95% 53%;       /* Golden Yellow */
+    --new: 172 66% 50%;           /* Teal */
+    
+    /* Base Theme Colors - Dark Mode by Default */
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 24 95% 53%;        /* Sunset Orange */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 2 85% 63%;       /* Coral Red */
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 47 95% 53%;         /* Golden Yellow */
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 24 95% 53%;
+  }
+}
