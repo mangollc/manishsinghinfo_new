@@ -1,0 +1,9 @@
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-[hsl(var(--primary))] via-[hsl(var(--secondary))] to-[hsl(var(--accent))] bg-clip-text text-transparent;
+  }
+
+  .hero-gradient {
+    @apply bg-gradient-to-r from-[hsl(var(--immigration))] via-[hsl(var(--tech))] to-[hsl(var(--business))] bg-clip-text text-transparent;
+  }
+}
