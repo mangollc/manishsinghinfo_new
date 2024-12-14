@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef } from "react"
+import { Container } from "@/components/ui/container"
 import Image from "next/image"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -33,11 +33,11 @@ const featuredProducts = [
 
 export function FeaturedProducts() {
   return (
-    <section className="border-t py-20">
-      <div className="container">
+    <section className="border-t py-16 md:py-24">
+      <Container>
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold">Featured Products</h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Discover our most popular digital products and resources
           </p>
         </div>
@@ -52,7 +52,7 @@ export function FeaturedProducts() {
                         src={product.image}
                         alt={product.title}
                         fill
-                        className="object-cover rounded-t-lg"
+                        className="rounded-t-lg object-cover"
                       />
                     </div>
                   </CardHeader>
@@ -65,7 +65,7 @@ export function FeaturedProducts() {
                     <h3 className="text-lg font-semibold">{product.title}</h3>
                     <p className="mt-2 text-sm text-muted-foreground">{product.description}</p>
                   </CardContent>
-                  <CardFooter className="p-4 pt-0 flex items-center justify-between">
+                  <CardFooter className="flex items-center justify-between p-4 pt-0">
                     <span className="text-lg font-bold">{product.price}</span>
                     <Button>Learn More</Button>
                   </CardFooter>
@@ -76,7 +76,7 @@ export function FeaturedProducts() {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-      </div>
+      </Container>
     </section>
   )
 }
