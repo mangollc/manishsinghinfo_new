@@ -1,23 +1,45 @@
 import { Container } from "@/components/ui/container"
-import { DesktopFooterNav } from "./desktop-nav"
-import { MobileFooterNav } from "./mobile-nav"
+import { FooterNavSection } from "./nav/section"
+import { MobileFooterNav } from "./nav/mobile"
 import { Newsletter } from "./newsletter"
 import { Copyright } from "./copyright"
+import { FOOTER_SECTIONS } from "@/lib/constants/footer"
 
 export function Footer() {
   return (
     <footer className="border-t bg-background">
-      <Container className="py-12 md:py-16">
-        <div className="grid gap-8">
-          <div className="grid gap-8">
-            <DesktopFooterNav />
-            <MobileFooterNav />
+      <Container>
+        {/* Desktop Layout */}
+        <div className="hidden md:block py-12">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-4 gap-8">
+              {/* Resources Column */}
+              <FooterNavSection {...FOOTER_SECTIONS.resources} />
+
+              {/* Company Column */}
+              <FooterNavSection {...FOOTER_SECTIONS.company} />
+
+              {/* Products Column */}
+              <FooterNavSection {...FOOTER_SECTIONS.products} />
+
+              {/* Newsletter Column */}
+              <Newsletter />
+            </div>
           </div>
-          <div className="mx-auto w-full max-w-md">
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="md:hidden py-8">
+          <MobileFooterNav />
+          <div className="mt-8 border-t pt-8">
             <Newsletter />
           </div>
         </div>
-        <Copyright />
+
+        {/* Copyright - Centered for both layouts */}
+        <div className="border-t py-8">
+          <Copyright />
+        </div>
       </Container>
     </footer>
   )
