@@ -1,0 +1,23 @@
+@layer components {
+  .nav-link {
+    @apply block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors;
+    @apply hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground;
+    @apply dark:hover:bg-muted/50 dark:hover:text-foreground dark:focus:bg-muted/50 dark:focus:text-foreground;
+  }
+
+  .nav-link-title {
+    @apply text-sm font-medium leading-none;
+  }
+
+  .nav-link-description {
+    @apply line-clamp-2 text-sm leading-snug text-muted-foreground;
+  }
+
+  .mobile-nav-trigger {
+    @apply mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden;
+  }
+
+  .mobile-nav-item {
+    @apply block px-2 py-1 text-lg font-medium transition-colors hover:text-primary;
+  }
+}
