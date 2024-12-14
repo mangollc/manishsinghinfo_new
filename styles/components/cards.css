@@ -1,0 +1,8 @@
+@layer components {
+  .card-immigration { @apply border-[hsl(var(--immigration))] bg-[hsl(var(--immigration))/0.1]; }
+  .card-tax { @apply border-[hsl(var(--tax))] bg-[hsl(var(--tax))/0.1]; }
+  .card-tech { @apply border-[hsl(var(--tech))] bg-[hsl(var(--tech))/0.1]; }
+  .card-ai { @apply border-[hsl(var(--ai))] bg-[hsl(var(--ai))/0.1]; }
+  .card-business { @apply border-[hsl(var(--business))] bg-[hsl(var(--business))/0.1]; }
+  .card-career { @apply border-[hsl(var(--career))] bg-[hsl(var(--career))/0.1]; }
+}
