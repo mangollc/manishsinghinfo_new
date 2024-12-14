@@ -27,74 +27,64 @@
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 5.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 24 95% 53%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 2 85% 63%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 47 95% 53%;
-    --accent-foreground: 0 0% 98%;
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 60%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 74.9%;
+    --accent: 47 95% 63%;
+    --accent-foreground: 224 71.4% 4.1%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 8.9%;
-    --input: 0 0% 14.9%;
-    --ring: 24 95% 53%;
-  }
-
-  .light {
-    .logo-splash {
-      @apply from-primary/80 via-accent/80 to-secondary/80;
-    }
-  }
-
-  .dark {
-    .logo-splash {
-      @apply from-primary/30 via-secondary/30 to-accent/30;
-    }
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 263.4 70% 60%;
   }
 }
 
 @layer components {
-  .card-shadow {
-    @apply shadow-lg dark:shadow-none;
-  }
-
-  .card-border {
-    @apply border dark:border-muted/10;
-  }
-
-  .card-hover {
-    @apply hover:shadow-xl transition-all duration-200
-    dark:hover:bg-muted/5 dark:hover:border-muted/20;
-  }
-
+  /* Navigation Styles */
   .nav-background {
     @apply bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60;
+    @apply dark:bg-background/90 dark:backdrop-blur dark:supports-[backdrop-filter]:bg-background/80;
+    @apply border-b border-border/40;
+    @apply sticky top-0 z-50;
   }
 
-  .logo-container {
-    @apply relative flex items-center;
+  .nav-menu-trigger {
+    @apply inline-flex items-center justify-center gap-1;
   }
 
-  .logo-text {
-    @apply relative z-10 px-4 py-2 text-2xl font-bold bg-clip-text text-transparent
-    transition-colors duration-200;
-  }
-}
-
-@layer utilities {
-  .gradient-text {
-    @apply bg-gradient-to-r from-[hsl(var(--primary))] via-[hsl(var(--secondary))] to-[hsl(var(--accent))] bg-clip-text text-transparent;
+  .nav-menu-icon {
+    @apply h-4 w-4 transition-transform duration-200;
+    @apply data-[state=open]:rotate-180;
   }
 
+  .nav-menu-content {
+    @apply p-4 min-w-[16rem] bg-popover rounded-md border shadow-lg;
+  }
+
+  .nav-menu-link {
+    @apply block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors;
+    @apply hover:bg-accent hover:text-accent-foreground;
+    @apply focus:bg-accent focus:text-accent-foreground;
+  }
+
+  /* Hero Section Styles */
   .hero-gradient {
-    @apply bg-gradient-to-r from-[hsl(var(--immigration))] via-[hsl(var(--tech))] to-[hsl(var(--business))] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+    @apply dark:from-primary dark:via-accent dark:to-secondary;
+  }
+
+  .logo-splash {
+    @apply bg-gradient-to-r from-primary/80 via-accent/80 to-secondary/80;
+    @apply dark:from-primary/40 dark:via-accent/40 dark:to-secondary/40;
   }
 }
