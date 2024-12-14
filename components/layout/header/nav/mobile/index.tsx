@@ -14,15 +14,16 @@ export function MobileNav() {
       <SheetTrigger asChild>
         <Button
           variant="ghost"
-          className="mr-2 px-0 text-base hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 lg:hidden"
+          size="icon"
+          className="lg:hidden"
+          aria-label="Open menu"
         >
-          <Menu className="h-6 w-6" />
-          <span className="sr-only">Toggle menu</span>
+          <Menu className="h-5 w-5" />
         </Button>
       </SheetTrigger>
-      <SheetContent side="left" className="pr-0">
+      <SheetContent side="left" className="w-80 p-0">
         <NavContent onSelect={() => setOpen(false)} />
       </SheetContent>
     </Sheet>
-  );
+  )
 }
