@@ -1,0 +1,45 @@
+@layer components {
+  .footer-nav-section {
+    @apply space-y-6;
+  }
+
+  .footer-nav-heading {
+    @apply text-base font-semibold tracking-wide text-foreground;
+  }
+
+  .footer-nav-list {
+    @apply space-y-4;
+  }
+
+  .footer-nav-link {
+    @apply block text-sm text-muted-foreground hover:text-primary transition-colors duration-200;
+  }
+
+  .footer-nav-mobile {
+    @apply space-y-4;
+  }
+
+  .footer-newsletter {
+    @apply space-y-4;
+  }
+
+  .footer-newsletter-heading {
+    @apply text-base font-semibold tracking-wide text-foreground;
+  }
+
+  .footer-newsletter-text {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .footer-copyright {
+    @apply flex flex-col items-center gap-4 py-8 border-t;
+  }
+
+  .footer-social {
+    @apply flex items-center justify-center gap-4;
+  }
+
+  .footer-social-icon {
+    @apply h-5 w-5 text-muted-foreground hover:text-primary transition-colors duration-200;
+  }
+}
