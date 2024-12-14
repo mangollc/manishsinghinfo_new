@@ -1,6 +1,9 @@
+import { SocialIcons } from "./social/icons"
+
 export function Copyright() {
   return (
-    <div className="mt-8 border-t pt-8 text-center">
+    <div className="flex flex-col items-center gap-4">
+      <SocialIcons />
       <p className="text-sm text-muted-foreground">
         © {new Date().getFullYear()} ManishSingh.info. All rights reserved.
       </p>
