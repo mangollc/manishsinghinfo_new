@@ -1,5 +1,6 @@
 "use client"
 
+import { Container } from "@/components/ui/container"
 import Image from "next/image"
 import Link from "next/link"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
@@ -34,11 +35,11 @@ const featuredBlogs = [
 
 export function FeaturedBlogs() {
   return (
-    <section className="border-t bg-muted/40 py-20">
-      <div className="container">
+    <section className="border-t bg-muted/40 py-16 md:py-24">
+      <Container>
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold">Latest Insights</h2>
-          <p className="mx-auto max-w-2xl text-muted-foreground">
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
             Stay informed with our latest articles and guides
           </p>
         </div>
@@ -76,7 +77,7 @@ export function FeaturedBlogs() {
             </Card>
           ))}
         </div>
-      </div>
+      </Container>
     </section>
   )
 }
