@@ -1,17 +1,15 @@
-import { HeroSection } from "@/components/sections/hero-section"
-import { FeaturesSection } from "@/components/sections/features-section"
-import { FeaturedProducts } from "@/components/sections/featured-products"
-import { FeaturedBlogs } from "@/components/sections/featured-blogs"
-import { CTASection } from "@/components/sections/cta-section"
+import { HeroSection } from "@/components/sections/hero"
+import { FeaturesSection } from "@/components/sections/features"
+import { ProductsSection } from "@/components/products"
+import { BlogSection } from "@/components/blog"
 
 export default function Home() {
   return (
-    <>
+    <main>
       <HeroSection />
       <FeaturesSection />
-      <FeaturedProducts />
-      <FeaturedBlogs />
-      <CTASection />
-    </>
+      <ProductsSection />
+      <BlogSection />
+    </main>
   )
 }
